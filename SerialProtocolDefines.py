@@ -1,0 +1,55 @@
+"""
+Serial Protocol
+Copyright:  Embedded Systems Academy (EmSA) 2024
+            All rights reserved. esacademy.com
+Version:    1.00, EmSA 27-JUN-24
+"""
+
+# fmt: off
+# error codes
+ERROR_NOERROR              = 0
+ERROR_ODENTRYNOTFOUND      = (1 << 0)
+ERROR_INVALIDCOMMANDLENGTH = (1 << 1)
+ERROR_INVALIDCOMMAND       = (1 << 2)
+ERROR_COIABUSY             = (1 << 3)
+ERROR_NORESOURCES          = (1 << 4)
+ERROR_TXBUFFERFULL         = (1 << 5)
+ERROR_TRANSFERABORTED      = (1 << 6)
+ERROR_RXBUFFERTOOSMALL     = (1 << 7)
+ERROR_SDOTOGGLEERROR       = (1 << 8)
+ERROR_SDOTIMEOUT           = (1 << 9)
+ERROR_UNKNOWN              = (1 << 10)
+ERROR_NOTSUPPORTED         = (1 << 11)
+ERROR_NODEERROR            = (1 << 12)
+ERROR_TX                   = (1 << 29)
+ERROR_NORESPONSE           = (1 << 30)
+ERROR_WRONGRESPONSE        = (1 << 31)
+
+# node status values
+NODESTATUS_BOOT         = 0x00
+NODESTATUS_STOPPED      = 0x04
+NODESTATUS_OPERATIONAL  = 0x05
+NODESTATUS_PREOP        = 0x7F
+NODESTATUS_EMCY_NEW     = 0x80
+NODESTATUS_EMCY_OVER    = 0x81
+NODESTATUS_HBACTIVE     = 0x90
+NODESTATUS_HBLOST       = 0x91
+NODESTATUS_SCANSTARTED  = 0x9F
+NODESTATUS_SCANCOMPLETE = 0xA0
+NODESTATUS_SCANABORTED  = 0xA8
+NODESTATUS_RESETAPP     = 0xB0
+NODESTATUS_RESETCOM     = 0xB1
+NODESTATUS_SLEEP        = 0xF0
+NODESTATUS_BOOTLOADER   = 0xF1
+
+# hardware status values
+HWSTATUS_NONE           = 0
+HWSTATUS_INITALIZING    = (1 << 0)
+HWSTATUS_CANERROR       = (1 << 1)
+HWSTATUS_ERRORPASSIVE   = (1 << 2)
+HWSTATUS_RXQUEUEOVERRUN = (1 << 3)
+HWSTATUS_TXQUEUEOVERRUN = (1 << 4)
+HWSTATUS_SUPPORTSCANFD  = (1 << 5)
+HWSTATUS_TXBUSY         = (1 << 6)
+HWSTATUS_BUSOFF         = (1 << 7)
+# fmt: on
