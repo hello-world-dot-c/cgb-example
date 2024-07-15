@@ -12,7 +12,7 @@ or
 $ python3 RA_App_Demo_CLI.py <comport>
 ```
 
-## Windows 10/11 (x32/x64/ARM64)
+## Windows 10/11 (x86/x64/ARM64)
 
 ```
 > python.exe -m venv venv
